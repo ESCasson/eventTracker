@@ -1,0 +1,9 @@
+<p-card header={{event.eventname}}>
+    <p class="m-0">
+        {{event.description}}
+    </p>
+  @for (type of event.genres; track type.genreid){
+    <p-badge [value]=type.name></p-badge>
+  }
+</p-card>
+

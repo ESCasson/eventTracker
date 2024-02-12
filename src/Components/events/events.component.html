@@ -1,0 +1,13 @@
+<p-button (onClick)="GetEvents()" label="Get Events"></p-button>
+<p-button (onClick)="GetAllEvents()" label="Get All Events"></p-button>
+<div >
+<p-scrollPanel [style]="{ width: '100%', height: 'vh' }"  (scroll)="LoadMore($event)">
+  @for (event of events$ | async; track event.id ){
+    <app-event-card
+      [event]=event
+    ></app-event-card>
+  }
+</p-scrollPanel>
+</div>
+
+
