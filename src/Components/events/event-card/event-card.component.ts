@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { CardModule } from 'primeng/card';
 import { BadgeModule } from 'primeng/badge';
-import { IEvent } from '../../interfaces/Event';
+import { IEvent } from '../../../interfaces/Event';
 
 @Component({
   selector: 'app-event-card',

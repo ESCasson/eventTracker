@@ -1,9 +1,9 @@
 import { Component, HostListener } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
-import { HttpServiceService } from '../../services/http-service.service';
+import { HttpServiceService } from '../../services/httpService/http-service.service';
 import { IEvent, IEventReturn } from '../../interfaces/Event';
 import { EMPTY, Observable, expand, map, reduce, shareReplay } from 'rxjs';
-import { EventCardComponent } from "../event-card/event-card.component";
+import { EventCardComponent } from "./event-card/event-card.component";
 import { ScrollPanelModule } from 'primeng/scrollpanel';
 import { CommonModule } from '@angular/common';
 
