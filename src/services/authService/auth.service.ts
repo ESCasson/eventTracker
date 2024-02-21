@@ -14,4 +14,6 @@ export class AuthService {
     const correctEmailStucture = emailPattern.test(email); 
 	  return of(correctEmailStucture)
   }
+
+  
 }
