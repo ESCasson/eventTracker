@@ -5,6 +5,7 @@ export const LoginActions = createActionGroup({
   source: 'Login',
   events: {
     'Set Login': props<{ loginDetails: Login }>(),
-    'Reset Login': emptyProps()
+    'Reset Login': emptyProps(),
+    'Get Login': emptyProps()
   }
 })

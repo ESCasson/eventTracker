@@ -1,5 +1,3 @@
-
-
 ## TODO
   ** Login  **
   message if validation fails
@@ -8,6 +6,15 @@
   - set up guard that checks that there is a login email in the store and that the 
   login time is less that 3 hours ago
   -- if that is not the case, reset the login object to initial state redirect to the login page
+
+
+
+
+
+
+
+
+
 
 
   # EventsTracker

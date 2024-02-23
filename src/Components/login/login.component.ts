@@ -8,6 +8,7 @@ import { CommonModule } from '@angular/common';
 import { Login } from '../../interfaces/Login';
 import { Store } from '@ngrx/store';
 import { LoginActions } from '../../app/state/login.actions';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -23,7 +24,11 @@ export class LoginComponent {
 
   isEmailVaild$: Observable<boolean>
 
-  constructor(private authService: AuthService, private store: Store) { }
+  constructor(
+    private authService: AuthService,
+    private store: Store,
+    private router: Router
+  ) { }
 
   loginForm = new FormGroup({
     email: new FormControl('')
@@ -48,8 +53,10 @@ export class LoginComponent {
           this.store.dispatch(LoginActions.setLogin({
             loginDetails: {
               email: this.loginForm.controls.email.value,
-              loginDateTime: new Date().toDateString()
-          }}))
+              loginDateTime: new Date().toString()
+            }
+          }))
+          this.router.navigateByUrl('/Home')
         })
       )
   }
